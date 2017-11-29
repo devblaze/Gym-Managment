@@ -63,19 +63,9 @@ namespace GymManagment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
+        internal static System.Drawing.Bitmap plus2 {
             get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap add_blue {
-            get {
-                object obj = ResourceManager.GetObject("add_blue", resourceCulture);
+                object obj = ResourceManager.GetObject("plus2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

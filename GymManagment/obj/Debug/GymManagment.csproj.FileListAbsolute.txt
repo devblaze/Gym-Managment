@@ -11,3 +11,17 @@ c:\users\blaze\documents\visual studio 2017\Projects\GymManagment\GymManagment\o
 C:\Users\blaze\documents\visual studio 2017\Projects\GymManagment\GymManagment\bin\Debug\MetroFramework.Design.dll
 C:\Users\blaze\documents\visual studio 2017\Projects\GymManagment\GymManagment\bin\Debug\MetroFramework.dll
 C:\Users\blaze\documents\visual studio 2017\Projects\GymManagment\GymManagment\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\GymManagment.exe.config
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\GymManagment.exe
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\GymManagment.pdb
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Design.dll
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.dll
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csprojResolveAssemblyReference.cache
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MainForm.resources
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.NewMember.resources
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Properties.Resources.resources
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csproj.GenerateResource.Cache
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csproj.CoreCompileInputs.cache
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.exe
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.pdb
