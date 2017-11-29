@@ -31,5 +31,10 @@ namespace GymManagment
         {
             showPanel(new NewMember());
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            showPanel(new MembersFee());
+        }
     }
 }

@@ -60,6 +60,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MembersFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembersFee.Designer.cs">
+      <DependentUpon>MembersFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersFee.resx">
+      <DependentUpon>MembersFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewMember.resx">
       <DependentUpon>NewMember.cs</DependentUpon>
