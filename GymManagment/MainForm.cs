@@ -18,14 +18,18 @@ namespace GymManagment
             InitializeComponent();
         }
 
+        private void showPanel(Form test)
+        {
+            test.TopLevel = false;
+            metroPanel2.Controls.Add(test);
+            test.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            test.Dock = DockStyle.Fill;
+            test.Show();
+        }
+
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            NewMember form = new NewMember();
-            form.TopLevel = false;
-            metroPanel2.Controls.Add(form);
-            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            form.Show();
+            showPanel(new NewMember());
         }
     }
 }
