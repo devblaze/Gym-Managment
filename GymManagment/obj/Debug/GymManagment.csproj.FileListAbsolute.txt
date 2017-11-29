@@ -40,3 +40,4 @@ C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManag
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csproj.CoreCompileInputs.cache
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.exe
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.pdb
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MembersFee.resources

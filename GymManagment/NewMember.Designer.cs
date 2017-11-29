@@ -44,7 +44,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.Location = new System.Drawing.Point(12, 9);
+            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(48, 19);
             this.metroLabel1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(82, 9);
+            this.metroTextBox2.Location = new System.Drawing.Point(93, 60);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -97,7 +97,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(82, 38);
+            this.metroTextBox1.Location = new System.Drawing.Point(93, 89);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -115,7 +115,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(12, 67);
+            this.metroLabel2.Location = new System.Drawing.Point(23, 118);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(57, 19);
             this.metroLabel2.TabIndex = 3;
@@ -136,7 +136,7 @@
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(82, 67);
+            this.metroTextBox3.Location = new System.Drawing.Point(93, 118);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -154,7 +154,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(12, 38);
+            this.metroLabel3.Location = new System.Drawing.Point(23, 89);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(64, 19);
             this.metroLabel3.TabIndex = 5;
@@ -163,7 +163,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(12, 106);
+            this.metroLabel4.Location = new System.Drawing.Point(23, 157);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(56, 19);
             this.metroLabel4.TabIndex = 6;
@@ -172,7 +172,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(12, 142);
+            this.metroLabel5.Location = new System.Drawing.Point(23, 193);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(62, 19);
             this.metroLabel5.TabIndex = 7;
@@ -185,7 +185,7 @@
             this.metroComboBox1.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.metroComboBox1.Location = new System.Drawing.Point(82, 96);
+            this.metroComboBox1.Location = new System.Drawing.Point(93, 147);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(160, 29);
             this.metroComboBox1.TabIndex = 8;
@@ -200,7 +200,7 @@
             "Lose Weight",
             "Gain Muscle",
             "Personal Trainer"});
-            this.metroComboBox2.Location = new System.Drawing.Point(82, 132);
+            this.metroComboBox2.Location = new System.Drawing.Point(93, 183);
             this.metroComboBox2.Name = "metroComboBox2";
             this.metroComboBox2.Size = new System.Drawing.Size(160, 29);
             this.metroComboBox2.TabIndex = 9;
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 295);
+            this.ClientSize = new System.Drawing.Size(1030, 543);
             this.Controls.Add(this.metroComboBox2);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroLabel5);
@@ -223,6 +223,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "NewMember";
             this.Text = "NewMember";
+            this.Load += new System.EventHandler(this.NewMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
