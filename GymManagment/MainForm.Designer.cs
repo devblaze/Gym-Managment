@@ -112,7 +112,7 @@
             this.metroTile1.PaintTileCount = false;
             this.metroTile1.Size = new System.Drawing.Size(177, 100);
             this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "New Memeber";
+            this.metroTile1.Text = "New Customer";
             this.metroTile1.TileImage = global::GymManagment.Properties.Resources.add_user;
             this.metroTile1.UseSelectable = true;
             this.metroTile1.UseTileImage = true;
