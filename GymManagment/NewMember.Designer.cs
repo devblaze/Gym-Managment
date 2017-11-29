@@ -223,7 +223,6 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "NewMember";
             this.Text = "NewMember";
-            this.Load += new System.EventHandler(this.NewMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

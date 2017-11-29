@@ -21,41 +21,8 @@ namespace GymManagment
 
         private void ShowWindow(Form test)
         {
-            //bool check = false;
-            if (test.WindowState == FormWindowState.Normal)
-            {
-                test.MdiParent = this;
-                test.Show();
-            }
-            else
-            {
-                //test.MdiParent = this;
-                //test.Show();
-            }
-
-            /*foreach (Form form in this.MdiChildren)
-            {
-                if (form.GetType() == typeof(MainForm))
-                {
-                    if (form.WindowState == FormWindowState.Minimized)
-                    {
-                        form.WindowState = FormWindowState.Normal;
-                    }
-                    form.Activate();
-                    check = true;
-                    return;
-                }
-            }
-            if (check == false)
-            {
-                test.MdiParent = this;
-                test.Show();
-            }
-            test.TopLevel = false;
-            metroPanel2.Controls.Add(test);
-            test.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            test.Dock = DockStyle.Fill;
-            test.Show();*/
+            test.MdiParent = this;
+            test.Show();
         }
 
         private void metroTile1_Click(object sender, EventArgs e)

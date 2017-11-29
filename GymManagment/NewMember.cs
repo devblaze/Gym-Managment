@@ -17,10 +17,5 @@ namespace GymManagment
         {
             InitializeComponent();
         }
-
-        private void NewMember_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
