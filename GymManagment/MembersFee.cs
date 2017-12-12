@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GymManagment
 {
-    public partial class MembersFee : Form
+    public partial class MembersFee : MetroForm
     {
         public MembersFee()
         {

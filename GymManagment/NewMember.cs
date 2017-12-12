@@ -17,5 +17,28 @@ namespace GymManagment
         {
             InitializeComponent();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPackage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPackage.Text == "Custom")
+            {
+                lbFrom.Visible = true;
+                lbTo.Visible = true;
+                mcFrom.Visible = true;
+                mcTo.Visible = true;
+            }
+            else
+            {
+                lbFrom.Visible = false;
+                lbTo.Visible = false;
+                mcFrom.Visible = false;
+                mcTo.Visible = false;
+            }
+        }
     }
 }
