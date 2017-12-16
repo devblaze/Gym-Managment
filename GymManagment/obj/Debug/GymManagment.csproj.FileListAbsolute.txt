@@ -41,3 +41,7 @@ C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManag
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.exe
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.pdb
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MembersFee.resources
+C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
+C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
+C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\Database1.mdf
+C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\Database1_log.ldf
