@@ -4,3 +4,4 @@ A simple gym managment program for Alexander Technological Educational Institute
 # Developers
 * [Nick](https://github.com/devblaze)
 * [Leonidas](https://github.com/Leonidas-Antoniadis)
+* [Dimitiris](https://github.com/Jimmys20)
