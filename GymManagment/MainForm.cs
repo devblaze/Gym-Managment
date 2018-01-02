@@ -14,11 +14,11 @@ namespace GymManagment
 {
     public partial class MainForm : MetroForm
     {
-        public string server = "192.168.1.1";
-        public string database = "gym";
-        public string uid = "others";
-        public string password = "23102310";
-        //string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+         static string server = "192.168.1.1";
+         static string database = "gym";
+         static string uid = "others";
+         static string password = "23102310";
+        public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
         public MainForm()
         {

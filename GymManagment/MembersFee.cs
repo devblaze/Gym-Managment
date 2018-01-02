@@ -17,8 +17,8 @@ namespace GymManagment
 {
     public partial class MembersFee : MetroForm
     {   
-        SqlConnection cn;
-        SqlDataAdapter da1;
+        MySqlConnection cn;
+        MySqlDataAdapter da1;
         DataSet ds;
 
         public MembersFee()
@@ -28,10 +28,9 @@ namespace GymManagment
 
         private void MembersFee_Load(object sender, EventArgs e)
         {
-
-            string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\192.168.1.1(gym).mdf;Integrated Security=True;";
-            cn = new SqlConnection(cs);
-            da1 = new SqlDataAdapter("select * from customers", cn);
+            cn = new MySqlConnection(MainForm.connectionString);
+            cn.Open();
+            da1 = new MySqlDataAdapter("select * from customers", cn);
 
             ds = new DataSet();
             da1.Fill(ds, "Customers");
