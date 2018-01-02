@@ -40,6 +40,8 @@
             this.monthTB = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.payTB = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -113,11 +115,13 @@
             // 
             // startDate
             // 
+            this.startDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDate.Location = new System.Drawing.Point(123, 414);
             this.startDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(200, 30);
             this.startDate.TabIndex = 6;
+            this.startDate.Value = new System.DateTime(2018, 1, 2, 20, 36, 50, 0);
             this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // metroLabel3
@@ -131,6 +135,7 @@
             // 
             // endDate
             // 
+            this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.endDate.Location = new System.Drawing.Point(121, 482);
             this.endDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.endDate.Name = "endDate";
@@ -181,11 +186,52 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(23, 528);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(62, 20);
+            this.metroLabel5.TabIndex = 11;
+            this.metroLabel5.Text = "Payment";
+            // 
+            // payTB
+            // 
+            // 
+            // 
+            // 
+            this.payTB.CustomButton.Image = null;
+            this.payTB.CustomButton.Location = new System.Drawing.Point(176, 1);
+            this.payTB.CustomButton.Name = "";
+            this.payTB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.payTB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.payTB.CustomButton.TabIndex = 1;
+            this.payTB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.payTB.CustomButton.UseSelectable = true;
+            this.payTB.CustomButton.Visible = false;
+            this.payTB.Lines = new string[0];
+            this.payTB.Location = new System.Drawing.Point(121, 525);
+            this.payTB.MaxLength = 32767;
+            this.payTB.Name = "payTB";
+            this.payTB.PasswordChar = '\0';
+            this.payTB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.payTB.SelectedText = "";
+            this.payTB.SelectionLength = 0;
+            this.payTB.SelectionStart = 0;
+            this.payTB.ShortcutsEnabled = true;
+            this.payTB.Size = new System.Drawing.Size(198, 23);
+            this.payTB.TabIndex = 12;
+            this.payTB.UseSelectable = true;
+            this.payTB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.payTB.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // Subs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 607);
+            this.Controls.Add(this.payTB);
+            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.monthTB);
             this.Controls.Add(this.endDate);
@@ -215,11 +261,13 @@
         private MetroFramework.Controls.MetroTextBox costTB;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroDateTime startDate;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroDateTime endDate;
         private MetroFramework.Controls.MetroTextBox monthTB;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private MetroFramework.Controls.MetroTextBox payTB;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroDateTime startDate;
     }
 }

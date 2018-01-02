@@ -30,7 +30,7 @@ namespace GymManagment
         private void MembersFee_Load(object sender, EventArgs e)
         {       
             MainForm.connection.Open();
-            da1 = new MySqlDataAdapter("select * from customers", cn);
+            da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
             dataGridView1.DataSource = ds.Tables["Customers"];
@@ -49,21 +49,28 @@ namespace GymManagment
 
             dataGridView1.Columns.Add(link);
         }
-
+        static int a;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView1.Rows[e.RowIndex].Cells["Select"].ColumnIndex)
             {
                 String q = "select * from subscriptions";
                 q += " where customer_id='";
-                q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
-                da2 = new MySqlDataAdapter(q, cn);
+                q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";             
+                da2 = new MySqlDataAdapter(q, MainForm.connection);
                 da2.Fill(ds, "Subscriptions");
                 //MessageBox.Show(Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["name"].Value));
                 Subs sub = new Subs();
                 sub.ds = ds.Tables["Subscriptions"];
-                sub.ShowDialog();
+                a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);           
+                sub.ShowDialog();              
+               
             }
+        }
+
+        public static int CustomerId()
+        {
+            return a;
         }
     }
 }
