@@ -31,6 +31,7 @@ namespace GymManagment
         private void Subs_FormClosing(object sender, FormClosingEventArgs e)
         {
             ds.Clear();
+            
         }
 
         private void Subs_FormClosed(object sender, FormClosedEventArgs e)
@@ -43,6 +44,19 @@ namespace GymManagment
             cn = new MySqlConnection(MainForm.connectionString);
             cn.Open();
 
+        }
+
+        private void startDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthTB_Validated(object sender, EventArgs e)
+        {
+            if(int.Parse(monthTB.Text) > 12)
+            {
+                errorProvider1.SetError(monthTB,"Cant make a sub over 12 months");
+            }
         }
     }
 }
