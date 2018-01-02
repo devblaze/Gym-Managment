@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace GymManagment
 {
@@ -21,32 +22,10 @@ namespace GymManagment
             InitializeComponent();
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void addCustomer_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cbPackage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbPackage.Text == "Custom")
-            {
-                lbFrom.Visible = true;
-                lbTo.Visible = true;
-                mcFrom.Visible = true;
-                mcTo.Visible = true;
-            }
-            else
-            {
-                lbFrom.Visible = false;
-                lbTo.Visible = false;
-                mcFrom.Visible = false;
-                mcTo.Visible = false;
-            }
-        }
-
-        private void NewMember_Load(object sender, EventArgs e)
-        {
-           
+            string query = "INSERT INTO customers(name,surname,contact,gender,workout,height,weight,health_problems,notes) VALUES ('" + tbName+ "','" + tbSurname + "','" + tbContact + "','" + cbGender.Text + "','" + cbWorkout.Text + "','" + tbHeight + "','" + tbWeight + "','" + tbHealth + "','" + tbNotes + "')";
+            MySqlCommand command = new MySqlCommand(query, MainForm.connection);
         }
     }
 }

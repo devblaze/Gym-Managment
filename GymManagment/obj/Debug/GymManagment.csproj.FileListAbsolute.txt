@@ -43,3 +43,5 @@ C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManag
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MembersFee.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
