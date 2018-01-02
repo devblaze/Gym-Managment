@@ -28,9 +28,8 @@ namespace GymManagment
         }
 
         private void MembersFee_Load(object sender, EventArgs e)
-        {
-            cn = new MySqlConnection(MainForm.connectionString);
-            cn.Open();
+        {       
+            MainForm.connection.Open();
             da1 = new MySqlDataAdapter("select * from customers", cn);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
