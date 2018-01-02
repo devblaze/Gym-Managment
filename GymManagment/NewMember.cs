@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +24,20 @@ namespace GymManagment
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO customers(name,surname,contact,gender,workout,height,weight,health_problems,notes) VALUES ('" + tbName + "','" + tbSurname + "','" + tbContact + "','" + cbGender.Text + "','" + cbWorkout.Text + "','" + tbHeight + "','" + tbWeight + "','" + tbHealth + "','" + tbNotes + "')";
+            double heiDouble = double.Parse(tbHeight.Text);
+            double weiDouble = double.Parse(tbWeight.Text);
+            string query = "INSERT INTO customers(name,surname,contact,gender,workout,height,weight,health_problems,notes) VALUES ('" + tbName.Text + "','" + tbSurname.Text + "','" + tbContact.Text + "','" + cbGender.Text + "','" + cbWorkout.Text + "','" + heiDouble + "','" + weiDouble + "','" + tbHealth.Text + "','" + tbNotes.Text + "')";
+            MainForm.connection.Open();
             MySqlCommand command = new MySqlCommand(query, MainForm.connection);
+            if (command.ExecuteNonQuery()==1)
+            {
+                MetroMessageBox.Show(this, "Success", "Data saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Error", "Data not saved!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            MainForm.connection.Close();
         }
     }
 }

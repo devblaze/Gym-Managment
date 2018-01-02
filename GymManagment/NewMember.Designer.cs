@@ -201,7 +201,7 @@
             this.cbGender.Location = new System.Drawing.Point(90, 152);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(160, 29);
-            this.cbGender.TabIndex = 8;
+            this.cbGender.TabIndex = 4;
             this.cbGender.UseSelectable = true;
             // 
             // cbWorkout
@@ -216,7 +216,7 @@
             this.cbWorkout.Location = new System.Drawing.Point(90, 188);
             this.cbWorkout.Name = "cbWorkout";
             this.cbWorkout.Size = new System.Drawing.Size(160, 29);
-            this.cbWorkout.TabIndex = 9;
+            this.cbWorkout.TabIndex = 5;
             this.cbWorkout.UseSelectable = true;
             // 
             // tbHeight
@@ -244,7 +244,7 @@
             this.tbHeight.SelectionStart = 0;
             this.tbHeight.ShortcutsEnabled = true;
             this.tbHeight.Size = new System.Drawing.Size(160, 23);
-            this.tbHeight.TabIndex = 10;
+            this.tbHeight.TabIndex = 6;
             this.tbHeight.UseSelectable = true;
             this.tbHeight.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbHeight.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -283,7 +283,7 @@
             this.tbWeight.SelectionStart = 0;
             this.tbWeight.ShortcutsEnabled = true;
             this.tbWeight.Size = new System.Drawing.Size(160, 23);
-            this.tbWeight.TabIndex = 12;
+            this.tbWeight.TabIndex = 7;
             this.tbWeight.UseSelectable = true;
             this.tbWeight.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbWeight.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -332,7 +332,7 @@
             this.tbHealth.SelectionStart = 0;
             this.tbHealth.ShortcutsEnabled = true;
             this.tbHealth.Size = new System.Drawing.Size(162, 93);
-            this.tbHealth.TabIndex = 18;
+            this.tbHealth.TabIndex = 9;
             this.tbHealth.UseSelectable = true;
             this.tbHealth.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbHealth.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -360,7 +360,7 @@
             this.metroButton1.Location = new System.Drawing.Point(292, 257);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(109, 23);
-            this.metroButton1.TabIndex = 21;
+            this.metroButton1.TabIndex = 10;
             this.metroButton1.Text = "Browse";
             this.metroButton1.UseSelectable = true;
             // 
@@ -369,7 +369,7 @@
             this.metroButton2.Location = new System.Drawing.Point(292, 332);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(277, 47);
-            this.metroButton2.TabIndex = 24;
+            this.metroButton2.TabIndex = 11;
             this.metroButton2.Text = "+ Add New Customer";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
@@ -399,7 +399,7 @@
             this.tbNotes.SelectionStart = 0;
             this.tbNotes.ShortcutsEnabled = true;
             this.tbNotes.Size = new System.Drawing.Size(160, 93);
-            this.tbNotes.TabIndex = 29;
+            this.tbNotes.TabIndex = 8;
             this.tbNotes.UseSelectable = true;
             this.tbNotes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbNotes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

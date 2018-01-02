@@ -17,7 +17,6 @@ namespace GymManagment
 {
     public partial class MembersFee : MetroForm
     {   
-        MySqlConnection cn;
         MySqlDataAdapter da1;
         MySqlDataAdapter da2;
         DataSet ds;
@@ -30,7 +29,7 @@ namespace GymManagment
         private void MembersFee_Load(object sender, EventArgs e)
         {       
             MainForm.connection.Open();
-            da1 = new MySqlDataAdapter("select * from customers", cn);
+            da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
             dataGridView1.DataSource = ds.Tables["Customers"];
@@ -57,7 +56,7 @@ namespace GymManagment
                 String q = "select * from subscriptions";
                 q += " where customer_id='";
                 q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
-                da2 = new MySqlDataAdapter(q, cn);
+                da2 = new MySqlDataAdapter(q, MainForm.connection);
                 da2.Fill(ds, "Subscriptions");
                 //MessageBox.Show(Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["name"].Value));
                 Subs sub = new Subs();

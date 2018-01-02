@@ -15,7 +15,6 @@ namespace GymManagment
     public partial class Subs : MetroForm
     {
         public DataTable ds;
-        MySqlConnection cn;
         MySqlDataAdapter da1;
 
         public Subs()
@@ -41,10 +40,8 @@ namespace GymManagment
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            cn = new MySqlConnection(MainForm.connectionString);
-            cn.Open();
-
-        }
+            MainForm.connection.Open();
+          }
 
         private void startDate_ValueChanged(object sender, EventArgs e)
         {
