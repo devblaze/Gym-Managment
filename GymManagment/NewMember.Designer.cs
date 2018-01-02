@@ -426,6 +426,7 @@
             this.metroButton2.TabIndex = 24;
             this.metroButton2.Text = "Save";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroTextBox8
             // 
