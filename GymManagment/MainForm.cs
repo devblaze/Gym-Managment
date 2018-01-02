@@ -14,11 +14,12 @@ namespace GymManagment
 {
     public partial class MainForm : MetroForm
     {
-         static string server = "192.168.1.1";
-         static string database = "gym";
-         static string uid = "others";
-         static string password = "23102310";
-        public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+        static string server = "192.168.1.1";
+        static string database = "gym";
+        static string uid = "others";
+        static string password = "23102310";
+        static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+        public static MySqlConnection connection = new MySqlConnection(connectionString);
 
         public MainForm()
         {
