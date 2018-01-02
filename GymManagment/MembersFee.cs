@@ -29,9 +29,9 @@ namespace GymManagment
         private void MembersFee_Load(object sender, EventArgs e)
         {
 
-            string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;";
+            string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\192.168.1.1(gym).mdf;Integrated Security=True;";
             cn = new SqlConnection(cs);
-            da1 = new SqlDataAdapter("select * from Customers", cn);
+            da1 = new SqlDataAdapter("select * from customers", cn);
 
             ds = new DataSet();
             da1.Fill(ds, "Customers");
