@@ -62,15 +62,13 @@ namespace GymManagment
             try
             {
                 if (e.ColumnIndex == dataGridView1.Rows[e.RowIndex].Cells["Subs"].ColumnIndex)
-                {
-                    MessageBox.Show(e.ColumnIndex.ToString());
+                {                  
                     String q = "select * from subscriptions";
                     q += " where customer_id='";
                     q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
                     da2 = new MySqlDataAdapter(q, MainForm.connection);
                     da2.Fill(ds, "Subscriptions");
-                    Subs sub = new Subs();
-                    sub.ds = ds.Tables["Subscriptions"];
+                    Subs sub = new Subs();                   
                     a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
                     sub.ShowDialog();
 

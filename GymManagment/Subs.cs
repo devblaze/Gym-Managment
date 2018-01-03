@@ -13,8 +13,7 @@ using MySql.Data.MySqlClient;
 namespace GymManagment
 {
     public partial class Subs : MetroForm
-    {
-        public DataTable ds;
+    {       
         MySqlDataAdapter da2;
         private DataSet ds2;
         MySqlCommand com;
@@ -26,13 +25,14 @@ namespace GymManagment
 
         private void Subs_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ds;
+            
             ds2 = new DataSet();
+            rerfeshGrid();
         }
 
         private void Subs_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ds.Clear();
+           
             
         }
 
@@ -98,34 +98,50 @@ namespace GymManagment
 
         private void monthTB_Validated(object sender, EventArgs e)
         {
-            if(int.Parse(monthTB.Text) > 12)
+            try
             {
-                errorProvider1.SetError(monthTB,"Cant make a sub over 12 months");
+                if (int.Parse(monthTB.Text) > 12)
+                {
+                    errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
 
-            }
-            else
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    DateTime date = new DateTime();
+                    date = startDate.Value;
+                    endDate.Value = date.AddMonths(int.Parse(monthTB.Text));
+                }
+            }catch(Exception ex)
             {
-                errorProvider1.Clear();
-                DateTime date = new DateTime();
-                date = startDate.Value;
-                endDate.Value = date.AddMonths(int.Parse(monthTB.Text));
+                errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
             }
         }
       
 
         private void monthsFTB_Validating(object sender, CancelEventArgs e)
         {
-            if(int.Parse(monthsFTB.Text) > 12)
+            try
             {
-                errorProvider1.SetError(monthsFTB,"Cant freeze sub over 12 months");
-            }else
-                errorProvider1.Clear();
+                if (int.Parse(monthsFTB.Text) > 12)
+                {
+                    errorProvider1.SetError(monthsFTB, "Cant freeze sub over 12 months");
+                }
+                else
+                    errorProvider1.Clear();
+            }
+            catch(Exception ex)
+            {
+                errorProvider1.SetError(monthsFTB, "Cant freeze sub over 12 months");
+            }
         }
-
+        MySqlCommandBuilder a;
         private void update_Click(object sender, EventArgs e)
         {
-            string q = "UPDATE subscriptions SET paid='"+ payTB.Text + "' WHERE id='"+subID.Text.ToString()+"'";
-            executeQuery(q);
+           // string q = "UPDATE subscriptions SET paid='"+ payTB.Text + "' WHERE id='"+subID.Text.ToString()+"'";
+            a = new MySqlCommandBuilder(da2);
+            da2.Update(ds2, "Subscriptions");
+          //  executeQuery(q);
             rerfeshGrid();
         }
 
@@ -133,6 +149,7 @@ namespace GymManagment
         {
             string q= "DELETE FROM subscriptions where id='"+ subID.Text.ToString()+"'";
             executeQuery(q);
+           
             rerfeshGrid();
         }
 
