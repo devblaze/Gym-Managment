@@ -48,6 +48,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "MembersFee";
             this.Text = "MembersFee";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MembersFee_FormClosing);
             this.Load += new System.EventHandler(this.MembersFee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

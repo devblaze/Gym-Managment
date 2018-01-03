@@ -29,8 +29,15 @@ namespace GymManagment
 
         private void ShowWindow(Form test)
         {
-            test.MdiParent = this;
-            test.Show();
+            try
+            {
+                test.MdiParent = this;
+                test.Show();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
