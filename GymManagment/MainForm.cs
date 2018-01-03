@@ -27,8 +27,9 @@ namespace GymManagment
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void ShowWindow(Form test)
+        private void ShowWindow(Form win)
         {
+<<<<<<< HEAD
             try
             {
                 test.MdiParent = this;
@@ -38,6 +39,10 @@ namespace GymManagment
             {
 
             }
+=======
+            win.MdiParent = this;
+            win.Show();
+>>>>>>> nick
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -48,6 +53,11 @@ namespace GymManagment
         private void metroTile2_Click(object sender, EventArgs e)
         {
             ShowWindow(new MembersFee());
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            ShowWindow(new EditCustomer());
         }
     }
 }

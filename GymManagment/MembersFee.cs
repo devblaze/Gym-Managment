@@ -17,7 +17,6 @@ namespace GymManagment
 {
     public partial class MembersFee : MetroForm
     {   
-        MySqlConnection cn;
         MySqlDataAdapter da1;
         MySqlDataAdapter da2;
         DataSet ds;
@@ -25,6 +24,7 @@ namespace GymManagment
         public MembersFee()
         {
             InitializeComponent();
+<<<<<<< HEAD
             try
             {
                 MainForm.connection.Open();
@@ -32,11 +32,17 @@ namespace GymManagment
             {
                 this.Close();
             }
+=======
+            MainForm.connection.Open();
+>>>>>>> nick
         }
 
         private void MembersFee_Load(object sender, EventArgs e)
         {       
+<<<<<<< HEAD
            
+=======
+>>>>>>> nick
             da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
@@ -61,6 +67,7 @@ namespace GymManagment
         {
             try
             {
+<<<<<<< HEAD
                 if (e.ColumnIndex == dataGridView1.Rows[e.RowIndex].Cells["Subs"].ColumnIndex)
                 {
                     MessageBox.Show(e.ColumnIndex.ToString());
@@ -78,6 +85,17 @@ namespace GymManagment
             }catch(Exception ex)
             {
 
+=======
+                String q = "select * from subscriptions";
+                q += " where customer_id='";
+                q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
+                da2 = new MySqlDataAdapter(q, MainForm.connection);
+                da2.Fill(ds, "Subscriptions");
+                //MessageBox.Show(Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["name"].Value));
+                Subs sub = new Subs();
+                sub.ds = ds.Tables["Subscriptions"];
+                sub.ShowDialog();
+>>>>>>> nick
             }
         }
 

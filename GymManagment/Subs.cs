@@ -15,9 +15,13 @@ namespace GymManagment
     public partial class Subs : MetroForm
     {
         public DataTable ds;
+<<<<<<< HEAD
         MySqlDataAdapter da2;
         private DataSet ds2;
         MySqlCommand com;
+=======
+        MySqlDataAdapter da1;
+>>>>>>> nick
 
         public Subs()
         {
@@ -81,6 +85,7 @@ namespace GymManagment
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
                      
             int tmp = MembersFee.CustomerId();
             string q = "INSERT INTO subscriptions(customer_id,start_date,end_date,package,cost,paid) VALUES(" + tmp + ",'" + startDate.Value.ToString() + "','" + endDate.Value.ToString() +"','"+monthTB.Text+"','" + double.Parse(costTB.Text) + "','" + payTB.Text + "')";
@@ -90,6 +95,10 @@ namespace GymManagment
 
         }
         
+=======
+            MainForm.connection.Open();
+          }
+>>>>>>> nick
 
         private void startDate_ValueChanged(object sender, EventArgs e)
         {
@@ -154,6 +163,11 @@ namespace GymManagment
             string q = "UPDATE subscriptions SET end_date='" + endDate.Value.ToString() + "' WHERE id='" + subID.Text.ToString() + "'";
             executeQuery(q);
             rerfeshGrid();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
