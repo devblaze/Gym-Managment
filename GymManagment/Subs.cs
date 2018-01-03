@@ -15,13 +15,9 @@ namespace GymManagment
     public partial class Subs : MetroForm
     {
         public DataTable ds;
-<<<<<<< HEAD
         MySqlDataAdapter da2;
         private DataSet ds2;
         MySqlCommand com;
-=======
-        MySqlDataAdapter da1;
->>>>>>> nick
 
         public Subs()
         {
@@ -84,21 +80,12 @@ namespace GymManagment
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
-        {
-<<<<<<< HEAD
-                     
+        {        
             int tmp = MembersFee.CustomerId();
             string q = "INSERT INTO subscriptions(customer_id,start_date,end_date,package,cost,paid) VALUES(" + tmp + ",'" + startDate.Value.ToString() + "','" + endDate.Value.ToString() +"','"+monthTB.Text+"','" + double.Parse(costTB.Text) + "','" + payTB.Text + "')";
             executeQuery(q);
             rerfeshGrid();
-
-
         }
-        
-=======
-            MainForm.connection.Open();
-          }
->>>>>>> nick
 
         private void startDate_ValueChanged(object sender, EventArgs e)
         {
@@ -110,7 +97,6 @@ namespace GymManagment
             if(int.Parse(monthTB.Text) > 12)
             {
                 errorProvider1.SetError(monthTB,"Cant make a sub over 12 months");
-
             }
             else
             {

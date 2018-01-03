@@ -17,7 +17,6 @@ C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\GymManagmen
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Design.dll
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.dll
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csprojResolveAssemblyReference.cache
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MainForm.resources
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.NewMember.resources
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Properties.Resources.resources
@@ -47,3 +46,4 @@ C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManag
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Subs.resources
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.EditCustomer.resources

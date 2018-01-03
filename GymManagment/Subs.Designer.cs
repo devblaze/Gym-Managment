@@ -66,12 +66,7 @@
             // 
             // metroButton1
             // 
-<<<<<<< HEAD
             this.metroButton1.Location = new System.Drawing.Point(859, 585);
-=======
-            this.metroButton1.Location = new System.Drawing.Point(644, 444);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
->>>>>>> nick
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(110, 31);
             this.metroButton1.TabIndex = 1;
@@ -133,15 +128,9 @@
             // 
             // startDate
             // 
-<<<<<<< HEAD
             this.startDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startDate.Location = new System.Drawing.Point(123, 414);
             this.startDate.MinimumSize = new System.Drawing.Size(0, 30);
-=======
-            this.startDate.Location = new System.Drawing.Point(92, 336);
-            this.startDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.startDate.MinimumSize = new System.Drawing.Size(0, 29);
->>>>>>> nick
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(151, 30);
             this.startDate.TabIndex = 6;
@@ -160,15 +149,9 @@
             // 
             // endDate
             // 
-<<<<<<< HEAD
             this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.endDate.Location = new System.Drawing.Point(121, 482);
             this.endDate.MinimumSize = new System.Drawing.Size(0, 30);
-=======
-            this.endDate.Location = new System.Drawing.Point(91, 392);
-            this.endDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.endDate.MinimumSize = new System.Drawing.Size(0, 29);
->>>>>>> nick
             this.endDate.Name = "endDate";
             this.endDate.Size = new System.Drawing.Size(151, 30);
             this.endDate.TabIndex = 8;
@@ -372,7 +355,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1085, 706);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.freeze);
@@ -383,9 +365,6 @@
             this.Controls.Add(this.subID);
             this.Controls.Add(this.payTB);
             this.Controls.Add(this.metroLabel5);
-=======
-            this.ClientSize = new System.Drawing.Size(782, 493);
->>>>>>> nick
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.monthTB);
             this.Controls.Add(this.endDate);
