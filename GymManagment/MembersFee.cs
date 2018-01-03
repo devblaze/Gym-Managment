@@ -24,11 +24,11 @@ namespace GymManagment
         public MembersFee()
         {
             InitializeComponent();
+            MainForm.connection.Open();
         }
 
         private void MembersFee_Load(object sender, EventArgs e)
         {       
-            MainForm.connection.Open();
             da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");

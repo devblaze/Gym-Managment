@@ -55,5 +55,10 @@ namespace GymManagment
                 errorProvider1.SetError(monthTB,"Cant make a sub over 12 months");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

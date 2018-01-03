@@ -47,17 +47,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 51);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(863, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(647, 233);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(859, 546);
+            this.metroButton1.Location = new System.Drawing.Point(644, 444);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(146, 38);
+            this.metroButton1.Size = new System.Drawing.Size(110, 31);
             this.metroButton1.TabIndex = 1;
             this.metroButton1.Text = "New Sub";
             this.metroButton1.UseSelectable = true;
@@ -69,16 +72,18 @@
             // 
             // 
             this.costTB.CustomButton.Image = null;
-            this.costTB.CustomButton.Location = new System.Drawing.Point(176, 1);
+            this.costTB.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.costTB.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.costTB.CustomButton.Name = "";
-            this.costTB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.costTB.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.costTB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.costTB.CustomButton.TabIndex = 1;
             this.costTB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.costTB.CustomButton.UseSelectable = true;
             this.costTB.CustomButton.Visible = false;
             this.costTB.Lines = new string[0];
-            this.costTB.Location = new System.Drawing.Point(123, 376);
+            this.costTB.Location = new System.Drawing.Point(92, 306);
+            this.costTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.costTB.MaxLength = 32767;
             this.costTB.Name = "costTB";
             this.costTB.PasswordChar = '\0';
@@ -87,7 +92,7 @@
             this.costTB.SelectionLength = 0;
             this.costTB.SelectionStart = 0;
             this.costTB.ShortcutsEnabled = true;
-            this.costTB.Size = new System.Drawing.Size(198, 23);
+            this.costTB.Size = new System.Drawing.Size(148, 19);
             this.costTB.TabIndex = 2;
             this.costTB.UseSelectable = true;
             this.costTB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -96,45 +101,50 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 379);
+            this.metroLabel1.Location = new System.Drawing.Point(17, 308);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(36, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(35, 19);
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Cost";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 414);
+            this.metroLabel2.Location = new System.Drawing.Point(17, 336);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(70, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(68, 19);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Start Date";
             // 
             // startDate
             // 
-            this.startDate.Location = new System.Drawing.Point(123, 414);
-            this.startDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.startDate.Location = new System.Drawing.Point(92, 336);
+            this.startDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.startDate.Name = "startDate";
-            this.startDate.Size = new System.Drawing.Size(200, 30);
+            this.startDate.Size = new System.Drawing.Size(151, 30);
             this.startDate.TabIndex = 6;
             this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 492);
+            this.metroLabel3.Location = new System.Drawing.Point(17, 400);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(66, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(62, 19);
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "End Date";
             // 
             // endDate
             // 
-            this.endDate.Location = new System.Drawing.Point(121, 482);
-            this.endDate.MinimumSize = new System.Drawing.Size(0, 30);
+            this.endDate.Location = new System.Drawing.Point(91, 392);
+            this.endDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.endDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.endDate.Name = "endDate";
-            this.endDate.Size = new System.Drawing.Size(200, 30);
+            this.endDate.Size = new System.Drawing.Size(151, 30);
             this.endDate.TabIndex = 8;
             // 
             // monthTB
@@ -143,16 +153,18 @@
             // 
             // 
             this.monthTB.CustomButton.Image = null;
-            this.monthTB.CustomButton.Location = new System.Drawing.Point(176, 1);
+            this.monthTB.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.monthTB.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monthTB.CustomButton.Name = "";
-            this.monthTB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.monthTB.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.monthTB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.monthTB.CustomButton.TabIndex = 1;
             this.monthTB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.monthTB.CustomButton.UseSelectable = true;
             this.monthTB.CustomButton.Visible = false;
             this.monthTB.Lines = new string[0];
-            this.monthTB.Location = new System.Drawing.Point(123, 453);
+            this.monthTB.Location = new System.Drawing.Point(92, 368);
+            this.monthTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monthTB.MaxLength = 32767;
             this.monthTB.Name = "monthTB";
             this.monthTB.PasswordChar = '\0';
@@ -161,7 +173,7 @@
             this.monthTB.SelectionLength = 0;
             this.monthTB.SelectionStart = 0;
             this.monthTB.ShortcutsEnabled = true;
-            this.monthTB.Size = new System.Drawing.Size(198, 23);
+            this.monthTB.Size = new System.Drawing.Size(148, 19);
             this.monthTB.TabIndex = 9;
             this.monthTB.UseSelectable = true;
             this.monthTB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -171,9 +183,10 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(23, 456);
+            this.metroLabel4.Location = new System.Drawing.Point(17, 370);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(55, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(52, 19);
             this.metroLabel4.TabIndex = 10;
             this.metroLabel4.Text = "Months";
             // 
@@ -183,9 +196,9 @@
             // 
             // Subs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 607);
+            this.ClientSize = new System.Drawing.Size(782, 493);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.monthTB);
             this.Controls.Add(this.endDate);
@@ -196,7 +209,9 @@
             this.Controls.Add(this.costTB);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Subs";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Text = "Subs";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Subs_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Subs_FormClosed);
