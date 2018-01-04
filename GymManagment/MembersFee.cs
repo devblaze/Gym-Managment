@@ -17,18 +17,20 @@ namespace GymManagment
 {
     public partial class MembersFee : MetroForm
     {   
-        MySqlConnection cn;
+
         MySqlDataAdapter da1;
         MySqlDataAdapter da2;
         DataSet ds;
 
         public MembersFee()
         {
+
             InitializeComponent();
             try
             {
-                MainForm.connection.Open();
-            }catch(Exception ex)
+                MainForm.connection.Open();               
+            }
+            catch(Exception ex)
             {
                 this.Close();
             }
@@ -55,6 +57,7 @@ namespace GymManagment
             link.VisitedLinkColor = Color.YellowGreen;
 
             dataGridView1.Columns.Add(link);
+           // checkdate();
         }
         static int a;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,7 +72,7 @@ namespace GymManagment
                     da2 = new MySqlDataAdapter(q, MainForm.connection);
                     da2.Fill(ds, "Subscriptions");
                     Subs sub = new Subs();                   
-                    a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
+                    a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);                  
                     sub.ShowDialog();
 
                 }
@@ -78,7 +81,35 @@ namespace GymManagment
 
             }
         }
+       
+        private void checkdate()
+        {
+            DateTime tmp2 = new DateTime();
+            tmp2 = DateTime.Now;         
+            String q = "select * from gym.subscriptions WHERE LOCATE('"+ tmp2.ToString("d/M/yyyy") + "',end_date)";
+            da2 = new MySqlDataAdapter(q, MainForm.connection);
+            da2.Fill(ds, "End_Subscriptions");                  
+            DataTable data = new DataTable();
+            data = ds.Tables["End_Subscriptions"];                            
+            for (int j = 0; j < data.Rows.Count; j++)
+            {           
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)                    
+                    try
+                    {
+                        if (int.Parse(dataGridView1.Rows[i].Cells["id"].Value.ToString()) == int.Parse(data.Rows[j]["customer_id"].ToString()))
+                        {                        
+                            dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                        }
+                    }catch(Exception ex)
+                    {
+                        
+                    }
 
+                }
+            }
+                
+            
+        
         public static int CustomerId()
         {
             return a;
@@ -87,6 +118,12 @@ namespace GymManagment
         private void MembersFee_FormClosing(object sender, FormClosingEventArgs e)
         {
             MainForm.connection.Close();
+        }     
+
+        private void check_Click(object sender, EventArgs e)
+        {
+            checkdate();
         }
     }
 }
+

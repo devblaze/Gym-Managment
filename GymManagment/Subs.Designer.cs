@@ -128,7 +128,7 @@
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(200, 30);
             this.startDate.TabIndex = 6;
-            this.startDate.Value = new System.DateTime(2018, 1, 2, 20, 36, 50, 0);
+            this.startDate.Value = new System.DateTime(2018, 1, 3, 0, 0, 0, 0);
             this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // metroLabel3
