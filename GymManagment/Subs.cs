@@ -97,11 +97,6 @@ namespace GymManagment
         {
             try
             {
-<<<<<<< HEAD
-                errorProvider1.SetError(monthTB,"Cant make a sub over 12 months");
-            }
-            else
-=======
                 if (int.Parse(monthTB.Text) > 12)
                 {
                     errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
@@ -115,7 +110,6 @@ namespace GymManagment
                     endDate.Value = date.AddMonths(int.Parse(monthTB.Text));
                 }
             }catch(Exception ex)
->>>>>>> leo2
             {
                 errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
             }

@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,15 +17,12 @@ using System.Data.SqlClient;
 namespace GymManagment
 {
     public partial class MembersFee : MetroForm
-<<<<<<< HEAD
     {   
-=======
-    {
         MySqlCommandBuilder builder;
->>>>>>> leo2
         MySqlDataAdapter da1;
         MySqlDataAdapter da2;
         DataSet ds;
+        MySqlCommand command;
 
         public MembersFee()
         {
@@ -41,10 +39,6 @@ namespace GymManagment
         }
         private void MembersFee_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-
->>>>>>> leo2
             da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
@@ -82,15 +76,7 @@ namespace GymManagment
                 }
             }catch(Exception ex)
             {
-                String q = "select * from subscriptions";
-                q += " where customer_id='";
-                q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
-                da2 = new MySqlDataAdapter(q, MainForm.connection);
-                da2.Fill(ds, "Subscriptions");
-                //MessageBox.Show(Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["name"].Value));
-                Subs sub = new Subs();
-                sub.ds = ds.Tables["Subscriptions"];
-                sub.ShowDialog();
+
             }
         }
        
@@ -145,6 +131,23 @@ namespace GymManagment
                 da1.Update(ds, "Customers");
             }catch(Exception ex) { MessageBox.Show("Cant Delete a customer when he has subs"); }
 
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+           
+            string nameSearch = tbSearch.Text;
+            string query = "SELECT * FROM customers WHERE CONCAT(`name`,`surname`) LIKE '" + nameSearch + "%'";
+            try
+            {
+                command = new MySqlCommand(query, MainForm.connection);
+                da1.Fill(ds, "Search_results");
+                dataGridView1.DataSource = ds.Tables["Search_results"];
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

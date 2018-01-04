@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace GymManagment
             }
             catch (Exception ex)
             {
-
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -48,11 +49,6 @@ namespace GymManagment
         private void metroTile2_Click(object sender, EventArgs e)
         {
             ShowWindow(new MembersFee());
-        }
-
-        private void btEdit_Click(object sender, EventArgs e)
-        {
-            ShowWindow(new EditCustomer());
         }
     }
 }
