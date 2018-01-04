@@ -81,6 +81,7 @@
             this.metroTile5.TabIndex = 4;
             this.metroTile5.Text = "Create a gym Schedule";
             this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // metroPanel1
             // 
@@ -97,7 +98,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(945, 109);
+            this.metroPanel1.Size = new System.Drawing.Size(935, 109);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -122,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 641);
+            this.ClientSize = new System.Drawing.Size(975, 641);
             this.Controls.Add(this.metroPanel1);
             this.IsMdiContainer = true;
             this.Name = "MainForm";

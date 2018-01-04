@@ -50,5 +50,10 @@ namespace GymManagment
         {
             ShowWindow(new MembersFee());
         }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            ShowWindow(new WorkoutProgram());
+        }
     }
 }

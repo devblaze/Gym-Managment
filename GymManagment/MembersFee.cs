@@ -26,16 +26,24 @@ namespace GymManagment
 
         public MembersFee()
         {
-
-            InitializeComponent();
-            try
+            if (MainForm.connection.State == ConnectionState.Closed)
+            {
+                MainForm.connection.Open();
+                InitializeComponent();
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Connection Error", "Connection with the database could not be established!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+            /*try
             {
                 MainForm.connection.Open();               
             }
             catch(Exception ex)
             {
                 this.Close();
-            }
+            }*/
         }
         private void MembersFee_Load(object sender, EventArgs e)
         {
@@ -84,7 +92,7 @@ namespace GymManagment
         {
             DateTime tmp2 = new DateTime();
             tmp2 = DateTime.Now;         
-            String q = "select * from gym.subscriptions WHERE LOCATE('"+ tmp2.ToString("d/M/yyyy") + "',end_date)";
+            String q = "SELECT * FROM gym.subscriptions WHERE LOCATE('"+ tmp2.ToString("d/M/yyyy") + "',end_date)";
             da2 = new MySqlDataAdapter(q, MainForm.connection);
             da2.Fill(ds, "End_Subscriptions");                  
             DataTable data = new DataTable();
@@ -102,7 +110,6 @@ namespace GymManagment
                     {
                         
                     }
-
                 }
             }
                 
@@ -129,20 +136,24 @@ namespace GymManagment
             {
                 builder = new MySqlCommandBuilder(da1);
                 da1.Update(ds, "Customers");
-            }catch(Exception ex) { MessageBox.Show("Cant Delete a customer when he has subs"); }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cant Delete a customer when he has subs");
+            }
 
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-           
             string nameSearch = tbSearch.Text;
             string query = "SELECT * FROM customers WHERE CONCAT(`name`,`surname`) LIKE '" + nameSearch + "%'";
             try
             {
-                command = new MySqlCommand(query, MainForm.connection);
-                da1.Fill(ds, "Search_results");
-                dataGridView1.DataSource = ds.Tables["Search_results"];
+                da1 = new MySqlDataAdapter(query, MainForm.connection);
+                ds.Clear();
+                da1.Fill(ds, "Customers");
+                dataGridView1.DataSource = ds.Tables["Customers"];
             }
             catch (Exception ex)
             {
