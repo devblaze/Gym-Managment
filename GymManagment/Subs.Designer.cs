@@ -134,7 +134,7 @@
             this.startDate.Name = "startDate";
             this.startDate.Size = new System.Drawing.Size(151, 30);
             this.startDate.TabIndex = 6;
-            this.startDate.Value = new System.DateTime(2018, 1, 2, 20, 36, 50, 0);
+            this.startDate.Value = new System.DateTime(2018, 1, 3, 0, 0, 0, 0);
             this.startDate.ValueChanged += new System.EventHandler(this.startDate_ValueChanged);
             // 
             // metroLabel3
@@ -277,9 +277,9 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(846, 379);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(159, 20);
+            this.metroLabel6.Size = new System.Drawing.Size(157, 20);
             this.metroLabel6.TabIndex = 16;
-            this.metroLabel6.Text = "Sub to Update or Delete";
+            this.metroLabel6.Text = "Sub to Freeze or Delete";
             // 
             // metroLabel7
             // 
@@ -327,7 +327,7 @@
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(146, 38);
             this.update.TabIndex = 20;
-            this.update.Text = "Update Payment";
+            this.update.Text = "Update";
             this.update.UseSelectable = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
