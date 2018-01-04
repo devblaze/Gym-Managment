@@ -124,8 +124,12 @@ namespace GymManagment
 
         private void update_Click(object sender, EventArgs e)
         {
-            builder = new MySqlCommandBuilder(da1);
-            da1.Update(ds, "Customers");
+            try
+            {
+                builder = new MySqlCommandBuilder(da1);
+                da1.Update(ds, "Customers");
+            }catch(Exception ex) { MessageBox.Show("Cant Delete a customer when he has subs"); }
+
         }
     }
 }
