@@ -13,7 +13,8 @@ using MySql.Data.MySqlClient;
 namespace GymManagment
 {
     public partial class Subs : MetroForm
-    {       
+    {
+        MySqlCommandBuilder builder;
         MySqlDataAdapter da2;
         private DataSet ds2;
         MySqlCommand com;
@@ -135,14 +136,12 @@ namespace GymManagment
                 errorProvider1.SetError(monthsFTB, "Cant freeze sub over 12 months");
             }
         }
-        MySqlCommandBuilder a;
+       
         private void update_Click(object sender, EventArgs e)
         {
-           // string q = "UPDATE subscriptions SET paid='"+ payTB.Text + "' WHERE id='"+subID.Text.ToString()+"'";
-            a = new MySqlCommandBuilder(da2);
+            builder = new MySqlCommandBuilder(da2);
             da2.Update(ds2, "Subscriptions");
-          //  executeQuery(q);
-            rerfeshGrid();
+  
         }
 
         private void delete_Click(object sender, EventArgs e)
@@ -164,10 +163,8 @@ namespace GymManagment
             ds2.Clear();
             da2.Fill(ds2, "Subscriptions");
             dataGridView1.DataSource = ds2.Tables["Subscriptions"];
-
             date = DateTime.Parse(dataGridView1.Rows[0].Cells["end_date"].Value.ToString());
             endDate.Value = date.AddMonths(int.Parse(monthsFTB.Text));
-
             string q = "UPDATE subscriptions SET end_date='" + endDate.Value.ToString() + "' WHERE id='" + subID.Text.ToString() + "'";
             executeQuery(q);
             rerfeshGrid();

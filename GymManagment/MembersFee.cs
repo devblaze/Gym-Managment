@@ -16,8 +16,8 @@ using System.Data.SqlClient;
 namespace GymManagment
 {
     public partial class MembersFee : MetroForm
-    {   
-
+    {
+        MySqlCommandBuilder builder;
         MySqlDataAdapter da1;
         MySqlDataAdapter da2;
         DataSet ds;
@@ -35,15 +35,13 @@ namespace GymManagment
                 this.Close();
             }
         }
-
         private void MembersFee_Load(object sender, EventArgs e)
-        {       
-           
+        {
+
             da1 = new MySqlDataAdapter("select * from customers", MainForm.connection);
             ds = new DataSet();
             da1.Fill(ds, "Customers");
             dataGridView1.DataSource = ds.Tables["Customers"];
-
             var link = new DataGridViewLinkColumn();
             link.DataPropertyName = "Subs";
             link.Name = "Subs";
@@ -57,7 +55,6 @@ namespace GymManagment
             link.VisitedLinkColor = Color.YellowGreen;
 
             dataGridView1.Columns.Add(link);
-           // checkdate();
         }
         static int a;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -123,6 +120,12 @@ namespace GymManagment
         private void check_Click(object sender, EventArgs e)
         {
             checkdate();
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            builder = new MySqlCommandBuilder(da1);
+            da1.Update(ds, "Customers");
         }
     }
 }

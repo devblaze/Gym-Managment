@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.check = new MetroFramework.Controls.MetroButton();
+            this.update = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +52,22 @@
             this.check.UseSelectable = true;
             this.check.Click += new System.EventHandler(this.check_Click);
             // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(971, 470);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(182, 38);
+            this.update.TabIndex = 25;
+            this.update.Text = "Update";
+            this.update.UseSelectable = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
             // MembersFee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 592);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.check);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MembersFee";
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroButton check;
+        private MetroFramework.Controls.MetroButton update;
     }
 }
