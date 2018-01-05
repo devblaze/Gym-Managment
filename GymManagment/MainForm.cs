@@ -53,7 +53,16 @@ namespace GymManagment
 
         private void metroTile5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ShowWindow(new WorkoutProgram());
+=======
+
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            ShowWindow(new Equipment());
+>>>>>>> nick
         }
     }
 }

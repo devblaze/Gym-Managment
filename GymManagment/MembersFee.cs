@@ -80,7 +80,6 @@ namespace GymManagment
                     Subs sub = new Subs();                   
                     a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);                  
                     sub.ShowDialog();
-
                 }
             }catch(Exception ex)
             {
@@ -112,9 +111,7 @@ namespace GymManagment
                     }
                 }
             }
-                
-            
-        
+
         public static int CustomerId()
         {
             return a;
@@ -141,7 +138,10 @@ namespace GymManagment
             {
                 MessageBox.Show("Cant Delete a customer when he has subs");
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> nick
         }
 
         private void btSearch_Click(object sender, EventArgs e)

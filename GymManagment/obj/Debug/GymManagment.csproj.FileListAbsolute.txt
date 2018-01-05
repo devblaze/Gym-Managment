@@ -47,4 +47,8 @@ C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagmen
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+=======
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Equipment.resources
+>>>>>>> nick
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.WorkoutProgram.resources

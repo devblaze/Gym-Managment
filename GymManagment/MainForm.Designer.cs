@@ -68,8 +68,9 @@
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(177, 100);
             this.metroTile4.TabIndex = 3;
-            this.metroTile4.Text = "Equimpent";
+            this.metroTile4.Text = "Equipment";
             this.metroTile4.UseSelectable = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // metroTile5
             // 
@@ -79,7 +80,7 @@
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(177, 100);
             this.metroTile5.TabIndex = 4;
-            this.metroTile5.Text = "Create a gym Schedule";
+            this.metroTile5.Text = "Print Workout Program";
             this.metroTile5.UseSelectable = true;
             this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
@@ -98,7 +99,11 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 60);
             this.metroPanel1.Name = "metroPanel1";
+<<<<<<< HEAD
             this.metroPanel1.Size = new System.Drawing.Size(935, 109);
+=======
+            this.metroPanel1.Size = new System.Drawing.Size(934, 109);
+>>>>>>> nick
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -123,7 +128,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(975, 641);
+=======
+            this.ClientSize = new System.Drawing.Size(974, 641);
+>>>>>>> nick
             this.Controls.Add(this.metroPanel1);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
