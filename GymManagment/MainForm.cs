@@ -15,7 +15,7 @@ namespace GymManagment
 {
     public partial class MainForm : MetroForm
     {
-        static string server = "192.168.1.1";
+        static string server = "81.2.191.85";
         static string database = "gym";
         static string uid = "others";
         static string password = "23102310";
@@ -54,6 +54,11 @@ namespace GymManagment
         private void metroTile5_Click(object sender, EventArgs e)
         {
             ShowWindow(new WorkoutProgram());
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            ShowWindow(new Trainers());
         }
     }
 }

@@ -107,6 +107,12 @@
     <Compile Include="Subs.Designer.cs">
       <DependentUpon>Subs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainers.Designer.cs">
+      <DependentUpon>Trainers.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkoutProgram.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subs.resx">
       <DependentUpon>Subs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainers.resx">
+      <DependentUpon>Trainers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkoutProgram.resx">
       <DependentUpon>WorkoutProgram.cs</DependentUpon>
