@@ -17,6 +17,7 @@ namespace GymManagment
     {
         MySqlDataAdapter adapter;
         DataSet ds;
+        MySqlCommandBuilder builder;
 
         public Equipment()
         {
@@ -34,7 +35,6 @@ namespace GymManagment
                 MetroMessageBox.Show(this, "Connection Error", "Could not establish connection with the database", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
-            MainForm.connection = new MySqlConnection();
             adapter = new MySqlDataAdapter("SELECT * FROM equipment", MainForm.connection);
             ds = new DataSet();
             adapter.Fill(ds, "Equipment");
@@ -43,7 +43,16 @@ namespace GymManagment
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                builder = new MySqlCommandBuilder(adapter);
+                adapter.Update(ds, "Equipment");
+                MetroMessageBox.Show(this, "Success", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

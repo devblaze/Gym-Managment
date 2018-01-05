@@ -58,7 +58,7 @@ namespace GymManagment
 
         private void metroTile4_Click(object sender, EventArgs e)
         {
-            ShowWindow(new Form());
+            ShowWindow(new Equipment());
         }
     }
 }
