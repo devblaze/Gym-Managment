@@ -49,7 +49,7 @@
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(136, 31);
             this.check.TabIndex = 24;
-            this.check.Text = "Check Ending Customers";
+            this.check.Text = "Check Subscriptions";
             this.check.UseSelectable = true;
             this.check.Click += new System.EventHandler(this.check_Click);
             // 

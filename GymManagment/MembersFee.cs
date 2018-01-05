@@ -83,7 +83,7 @@ namespace GymManagment
                 }
             }catch(Exception ex)
             {
-
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
        
@@ -107,9 +107,9 @@ namespace GymManagment
                         }
                     }catch(Exception ex)
                     {
-                        
+                        MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
+            }
             }
 
         public static int CustomerId()
@@ -136,12 +136,8 @@ namespace GymManagment
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cant Delete a customer when he has subs");
+                MetroMessageBox.Show(this, "Cant Delete a customer when he has subs", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-<<<<<<< HEAD
-
-=======
->>>>>>> nick
         }
 
         private void btSearch_Click(object sender, EventArgs e)

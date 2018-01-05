@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,21 +27,10 @@ namespace GymManagment
 
         private void Subs_Load(object sender, EventArgs e)
         {
-            
             ds2 = new DataSet();
             rerfeshGrid();
         }
 
-        private void Subs_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           
-            
-        }
-
-        private void Subs_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           
-        }
         private void executeQuery(string query)
         {
             try
@@ -48,20 +38,19 @@ namespace GymManagment
                 com = new MySqlCommand(query, MainForm.connection);
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Query Executed");
-
+                    MetroMessageBox.Show(this, "Success", "Query executed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
-                    MessageBox.Show("Query Not Executed");
+                {
+                    MetroMessageBox.Show(this, "Error", "Query not executed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
-            
-
         }
+
         private void rerfeshGrid()
         {
             try
@@ -76,7 +65,7 @@ namespace GymManagment
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -88,19 +77,13 @@ namespace GymManagment
             rerfeshGrid();
         }
 
-        private void startDate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void monthTB_Validated(object sender, EventArgs e)
         {
             try
             {
-                if (int.Parse(monthTB.Text) > 12)
+                if (int.Parse(monthTB.Text) <= 0)
                 {
-                    errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
-
+                    errorProvider1.SetError(monthTB, "Cant make a subscription with no months");
                 }
                 else
                 {
@@ -111,7 +94,7 @@ namespace GymManagment
                 }
             }catch(Exception ex)
             {
-                errorProvider1.SetError(monthTB, "Cant make a sub over 12 months");
+                errorProvider1.SetError(monthTB, "Cant make a subscription with no months");
             }
         }
       
@@ -164,11 +147,6 @@ namespace GymManagment
             string q = "UPDATE subscriptions SET end_date='" + endDate.Value.ToString() + "' WHERE id='" + subID.Text.ToString() + "'";
             executeQuery(q);
             rerfeshGrid();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

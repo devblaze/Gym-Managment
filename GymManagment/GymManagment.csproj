@@ -113,12 +113,6 @@
     <Compile Include="Subs.Designer.cs">
       <DependentUpon>Subs.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkoutProgram.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WorkoutProgram.Designer.cs">
-      <DependentUpon>WorkoutProgram.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,9 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subs.resx">
       <DependentUpon>Subs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WorkoutProgram.resx">
-      <DependentUpon>WorkoutProgram.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
