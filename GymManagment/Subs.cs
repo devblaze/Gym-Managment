@@ -67,17 +67,8 @@ namespace GymManagment
             {
                 MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {        
-            int tmp = MembersFee.CustomerId();
-            string q = "INSERT INTO subscriptions(customer_id,start_date,end_date,package,cost,paid) VALUES(" + tmp + ",'" + startDate.Value.ToString() + "','" + endDate.Value.ToString() +"','"+monthTB.Text+"','" + double.Parse(costTB.Text) + "','" + payTB.Text + "')";
-            executeQuery(q);
-            rerfeshGrid();
-        }
-
-        private void monthTB_Validated(object sender, EventArgs e)
+        }      
+        private void monthTB_Validated_1(object sender, EventArgs e)
         {
             try
             {
@@ -92,49 +83,24 @@ namespace GymManagment
                     date = startDate.Value;
                     endDate.Value = date.AddMonths(int.Parse(monthTB.Text));
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 errorProvider1.SetError(monthTB, "Cant make a subscription with no months");
             }
         }
-      
 
-        private void monthsFTB_Validating(object sender, CancelEventArgs e)
+        private void metroButton1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                if (int.Parse(monthsFTB.Text) > 12)
-                {
-                    errorProvider1.SetError(monthsFTB, "Cant freeze sub over 12 months");
-                }
-                else
-                    errorProvider1.Clear();
-            }
-            catch(Exception ex)
-            {
-                errorProvider1.SetError(monthsFTB, "Cant freeze sub over 12 months");
-            }
-        }
-       
-        private void update_Click(object sender, EventArgs e)
-        {
-            builder = new MySqlCommandBuilder(da2);
-            da2.Update(ds2, "Subscriptions");
-  
-        }
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-            string q= "DELETE FROM subscriptions where id='"+ subID.Text.ToString()+"'";
+            int tmp = MembersFee.CustomerId();
+            string q = "INSERT INTO subscriptions(customer_id,start_date,end_date,package,cost,paid) VALUES(" + tmp + ",'" + startDate.Value.ToString() + "','" + endDate.Value.ToString() + "','" + monthTB.Text + "','" + double.Parse(costTB.Text) + "','" + payTB.Text + "')";
             executeQuery(q);
-           
             rerfeshGrid();
         }
 
-        private void freeze_Click(object sender, EventArgs e)
+        private void freeze_Click_1(object sender, EventArgs e)
         {
             DateTime date = new DateTime();
-                 
             String q2 = "select * from subscriptions";
             q2 += " where id='";
             q2 += subID.Text.ToString().ToString() + "'";
@@ -147,6 +113,13 @@ namespace GymManagment
             string q = "UPDATE subscriptions SET end_date='" + endDate.Value.ToString() + "' WHERE id='" + subID.Text.ToString() + "'";
             executeQuery(q);
             rerfeshGrid();
+        }
+
+        private void update_Click_1(object sender, EventArgs e)
+        {
+            builder = new MySqlCommandBuilder(da2);
+            da2.Update(ds2, "Subscriptions");
+
         }
     }
 }

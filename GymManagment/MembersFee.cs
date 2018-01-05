@@ -107,7 +107,7 @@ namespace GymManagment
                         }
                     }catch(Exception ex)
                     {
-                        MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     //   MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
             }
             }
