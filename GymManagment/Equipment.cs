@@ -21,20 +21,19 @@ namespace GymManagment
 
         public Equipment()
         {
-            InitializeComponent();
+            if (MainForm.connection.State == ConnectionState.Open)
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                MainForm.connection.Open();
+                InitializeComponent();
+            }
         }
 
         private void Equipment_Load(object sender, EventArgs e)
         {
-            if (MainForm.connection.State == ConnectionState.Closed)
-            {
-                MainForm.connection.Open();
-            }
-            else
-            {
-                MetroMessageBox.Show(this, "Connection Error", "Could not establish connection with the database", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
             adapter = new MySqlDataAdapter("SELECT * FROM equipment", MainForm.connection);
             ds = new DataSet();
             adapter.Fill(ds, "Equipment");
@@ -48,6 +47,22 @@ namespace GymManagment
                 builder = new MySqlCommandBuilder(adapter);
                 adapter.Update(ds, "Equipment");
                 MetroMessageBox.Show(this, "Success", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM equipment WHERE CONCAT(`id`,`name`) LIKE '" + tbSearch.Text + "%'";
+            try
+            {
+                adapter = new MySqlDataAdapter(query, MainForm.connection);
+                ds.Clear();
+                adapter.Fill(ds, "Equipment");
+                metroGrid1.DataSource = ds.Tables["Equipment"];
             }
             catch (Exception ex)
             {
