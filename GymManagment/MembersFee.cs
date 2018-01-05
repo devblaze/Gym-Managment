@@ -23,6 +23,7 @@ namespace GymManagment
         MySqlDataAdapter da2;
         DataSet ds;
         MySqlCommand command;
+        static int customerID;
 
         public MembersFee()
         {
@@ -64,8 +65,7 @@ namespace GymManagment
             link.VisitedLinkColor = Color.YellowGreen;
 
             dataGridView1.Columns.Add(link);
-        }
-        static int a;
+        }      
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -77,8 +77,8 @@ namespace GymManagment
                     q += Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value) + "'";
                     da2 = new MySqlDataAdapter(q, MainForm.connection);
                     da2.Fill(ds, "Subscriptions");
-                    Subs sub = new Subs();                   
-                    a = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);                  
+                    Subs sub = new Subs();
+                    customerID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);                  
                     sub.ShowDialog();
                 }
             }catch(Exception ex)
@@ -114,7 +114,7 @@ namespace GymManagment
 
         public static int CustomerId()
         {
-            return a;
+            return customerID;
         }
 
         private void MembersFee_FormClosing(object sender, FormClosingEventArgs e)
