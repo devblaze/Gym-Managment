@@ -53,3 +53,4 @@ C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagmen
 >>>>>>> nick
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.WorkoutProgram.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Equipment.resources
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Trainers.resources

@@ -113,6 +113,12 @@
     <Compile Include="Subs.Designer.cs">
       <DependentUpon>Subs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainers.Designer.cs">
+      <DependentUpon>Trainers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subs.resx">
       <DependentUpon>Subs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainers.resx">
+      <DependentUpon>Trainers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
