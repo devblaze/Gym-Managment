@@ -22,7 +22,15 @@ namespace GymManagment
 
         public Subs()
         {
-            InitializeComponent();
+            if (MainForm.connection.State == ConnectionState.Open)
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                MainForm.connection.Open();
+                InitializeComponent();
+            }
         }
 
         private void Subs_Load(object sender, EventArgs e)

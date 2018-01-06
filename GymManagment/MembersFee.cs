@@ -27,15 +27,14 @@ namespace GymManagment
 
         public MembersFee()
         {
-            if (MainForm.connection.State == ConnectionState.Closed)
+            if (MainForm.connection.State == ConnectionState.Open)
             {
-                MainForm.connection.Open();
                 InitializeComponent();
             }
             else
             {
-                MetroMessageBox.Show(this, "Connection Error", "Connection with the database could not be established!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                MainForm.connection.Open();
+                InitializeComponent();
             }
             /*try
             {
