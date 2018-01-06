@@ -30,7 +30,6 @@ C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\GymManag
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Design.dll
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.dll
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csprojResolveAssemblyReference.cache
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MainForm.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.MembersFee.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.NewMember.resources
@@ -50,3 +49,4 @@ C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagmen
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.WorkoutProgram.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Equipment.resources
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Trainers.resources
+C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Trainers.resources

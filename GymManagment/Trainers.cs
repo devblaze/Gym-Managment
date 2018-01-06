@@ -16,20 +16,24 @@ namespace GymManagment
   public partial class Trainers : MetroForm
   {
     private MySqlDataAdapter da;
+    private MySqlCommandBuilder builder;
     private DataSet ds;
 
     public Trainers()
     {
-      InitializeComponent();
-    }
+            if (MainForm.connection.State == ConnectionState.Open)
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                MainForm.connection.Open();
+                InitializeComponent();
+            }
+        }
 
     private void Trainers_Load(object sender, EventArgs e)
-    {
-      if (MainForm.connection.State == ConnectionState.Closed)
-      {
-        MainForm.connection.Open();
-      }
-
+    {    
       da = new MySqlDataAdapter("select * from trainers", MainForm.connection);
       ds = new DataSet();
       da.Fill(ds, "Trainers");
@@ -54,7 +58,7 @@ namespace GymManagment
     {
       try
       {
-        var builder = new MySqlCommandBuilder(da);
+        builder = new MySqlCommandBuilder(da);
         da.Update(ds, "Trainers");
         MessageBox.Show("Saved successfully", "Success");
       }
@@ -66,7 +70,7 @@ namespace GymManagment
 
     private void Trainers_FormClosing(object sender, FormClosingEventArgs e)
     {
-      MainForm.connection.Close();
+     MainForm.connection.Close();
     }
   }
 }
