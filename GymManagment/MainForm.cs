@@ -15,7 +15,7 @@ namespace GymManagment
 {
     public partial class MainForm : MetroForm
     {
-        static string server = "81.2.191.85";
+        static string server = "gymmanager.ddns.net";
         static string database = "gym";
         static string uid = "others";
         static string password = "23102310";

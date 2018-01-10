@@ -46,7 +46,6 @@ C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagmen
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.dll
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\bin\Debug\MySql.Data.xml
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csprojResolveAssemblyReference.cache
-C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.WorkoutProgram.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Equipment.resources
 C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Trainers.resources
 C:\Users\leonidas\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Trainers.resources
@@ -70,3 +69,4 @@ C:\Users\Dimitris\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManag
 C:\Users\Dimitris\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.csproj.CoreCompileInputs.cache
 C:\Users\Dimitris\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.exe
 C:\Users\Dimitris\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.pdb
+C:\Users\blaze\Documents\GitHub\Gym-Managment\GymManagment\obj\Debug\GymManagment.Equipment.resources
